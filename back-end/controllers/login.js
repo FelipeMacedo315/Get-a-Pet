@@ -1,5 +1,6 @@
 const usersModel = require("../models/users");
 const jwt = require("jsonwebtoken");
+const checkAuth = require("./auth");
 
 async function login(req, res) {
   const { email, senha } = req.body;
@@ -11,13 +12,16 @@ async function login(req, res) {
     if (senha === checkLogin.senha) {
       res.status(200).json({ msg: "bem-vindo" });
       const idUser = checkLogin._id;
-      const tokenUser = jwt.sign({ userId: checkLogin._id }, "segredo");
+      const tokenUser = jwt.sign({ userId: checkLogin._id }, "segredo", {
+        expiresIn: "5h",
+      });
       const decodetoken = jwt.verify(tokenUser, "segredo");
       //mandar o token pro document do usuario
       const insertTokenDb = await usersModel.updateOne(
-        { _id:checkLogin._id },
+        { _id: checkLogin._id },
         { token: decodetoken }
       );
+   
     } else {
       res.status(422).json({ msg: "Senha inválida" });
     }
