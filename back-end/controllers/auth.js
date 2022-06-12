@@ -5,7 +5,9 @@ const checkAuth = async (req, res, next) => {
   const user = await usersModel.findOne({ email: emailUser });
   if (user === null) {
     res.status(422).json({ msg: "Faça login novamente!" });
+    res.end();
+  } else {
+    next();
   }
-  next();
 };
 module.exports = checkAuth;
