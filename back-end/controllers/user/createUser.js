@@ -1,4 +1,4 @@
-const usersModel = require("../models/users");
+const usersModel = require("../../models/users");
 const jwt = require("jsonwebtoken");
 
 function formRegisterUser(req, res) {

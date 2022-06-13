@@ -1,6 +1,6 @@
-const usersModel = require("../models/users");
+const usersModel = require("../../models/users");
 const jwt = require("jsonwebtoken");
-const checkAuth = require("./auth");
+const checkAuth = require("../user/auth");
 
 async function login(req, res) {
   const { email, senha } = req.body;
@@ -11,7 +11,7 @@ async function login(req, res) {
   } else {
     if (senha === checkLogin.senha) {
       res.status(200).json({ msg: "bem-vindo" });
-      const idUser = checkLogin._id;
+   
       const tokenUser = jwt.sign({ userId: checkLogin._id }, "segredo", {
         expiresIn: "5h",
       });

@@ -1,4 +1,4 @@
-const usersModel = require("../models/users");
+const usersModel = require("../../models/users");
 
 function updateinfo(req, res) {
   const { nome, email, senha } = req.body;
@@ -8,7 +8,7 @@ function updateinfo(req, res) {
       .json({ msg: "Todos os campos precisam estar corretamente prenchidos" });
   } else {
     usersModel.updateOne(
-      { email: req.params.emailUser },
+      { email: req.headers.email },
       { nome: nome, email: email, senha: senha },
       (err, ok) => {
         err

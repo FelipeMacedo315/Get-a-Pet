@@ -17,3 +17,5 @@ const petsModel = mongoose.model(
     { timestamps: true }
   )
 );
+
+ module.exports = petsModel
