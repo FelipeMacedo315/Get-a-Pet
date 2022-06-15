@@ -1,7 +1,7 @@
 const usersModel = require("../../models/users");
 
 const checkAuth = async (req, res, next) => {
-  const exactUser = req.headers.email
+  const exactUser = req.headers.email;
   const user = await usersModel.findOne({ email: exactUser });
   if (
     user === null ||
