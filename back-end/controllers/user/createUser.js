@@ -8,15 +8,6 @@ function formRegisterUser(req, res) {
 async function dataUserRegister(req, res) {
   const { nome, email, senha } = req.body;
 
-  if (nome.length === 0) {
-    return res.status(422).json({ msg: "O nome é obrigatorio" });
-  }
-  if (email.length === 0) {
-    return res.status(422).json({ msg: "O email é obrigatorio" });
-  }
-  if (senha.length === 0) {
-    return res.status(422).json({ msg: "A senha é obrigatoria" });
-  }
 
   const checkUser = await usersModel.findOne({ email: email });
 

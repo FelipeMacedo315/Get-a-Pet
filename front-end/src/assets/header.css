@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightblue;
+  align-items: center;
+}
+header img {
+  height: 50px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
