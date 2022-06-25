@@ -1,5 +1,6 @@
 const usersModel = require("../../models/users");
 const jwt = require("jsonwebtoken");
+const token = require("./token");
 
 function formRegisterUser(req, res) {
   res.send("mknjnj");
@@ -7,7 +8,6 @@ function formRegisterUser(req, res) {
 
 async function dataUserRegister(req, res) {
   const { nome, email, senha } = req.body;
-
 
   const checkUser = await usersModel.findOne({ email: email });
 
@@ -19,6 +19,8 @@ async function dataUserRegister(req, res) {
       email: email,
       senha: senha,
     });
+
+    token(email);
 
     return res
       .status(200)

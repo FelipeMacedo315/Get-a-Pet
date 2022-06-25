@@ -9,15 +9,13 @@ import UserContext from "./components/ContextUser";
 import { useState } from "react";
 
 function App() {
-  const [dataRegister, setDataRegister] = useState({
-    nome:null,
-    email:null,
-    senha:null
-  });
+  const [dataRegister, setDataRegister] = useState({});
+  const [resultApi, setResultApi] = useState("");
+  const [session, setSession] = useState("");
   return (
     <div className="App">
       <BrowserRouter>
-        <UserContext.Provider value={{ dataRegister, setDataRegister }}>
+        <UserContext.Provider value={{ dataRegister, setDataRegister, resultApi, setResultApi,session,setSession }}>
           <Header />
           <Container>
             <Routes>
@@ -33,3 +31,4 @@ function App() {
 }
 
 export default App;
+

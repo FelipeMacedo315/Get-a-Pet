@@ -1,5 +1,5 @@
 const express = require("express");
-const checkAuth = require("../controllers/user/auth");
+const checkAuth = require("../controllers/user/checkToken");
 const { login, loginForm } = require("../controllers/user/login");
 const updateinfo = require("../controllers/user/updateInfo");
 const loginRoutes = express.Router();

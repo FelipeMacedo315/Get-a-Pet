@@ -1,6 +1,6 @@
 const express = require("express");
 const createPets = require("../../controllers/pets/createPet");
-const checkAuth = require("../../controllers/user/auth");
+const checkAuth = require("../../controllers/user/checkToken");
 
 const createPetRouter = express.Router();
 
