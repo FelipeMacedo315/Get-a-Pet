@@ -21,10 +21,9 @@ async function dataUserRegister(req, res) {
     });
 
     token(email);
+    const dataUserCreate = await usersModel.findOne({ email: email });
 
-    return res
-      .status(200)
-      .json({ msg: `${nome} sua conta foi criada com sucesso!` });
+    return res.status(200).json({ msg: `${nome} sua conta foi criada com sucesso!`, keytoken: dataUserCreate._id.toString() });
   }
 }
 

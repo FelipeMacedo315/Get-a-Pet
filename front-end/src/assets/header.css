@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: rgb(233, 233, 20);
   align-items: center;
   padding: 0% 5%;
 }
@@ -11,8 +11,21 @@ header img {
 ul {
   list-style: none;
   display: flex;
-
   width: 20%;
-  display: flex;
   justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  color: rgb(44, 44, 177);
+  font-weight: bold;
+  transition: 800ms;
+  padding: 5% 2%;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+a:hover {
+  border: none;
+  color: white;
+  background-color: rgb(44, 44, 177);
+  
 }

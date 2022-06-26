@@ -5,31 +5,32 @@ import "../assets/header.css";
 import UserContext from "./ContextUser";
 function Header() {
   const { resultApi, setResultApi, dataRegister, setDataRegister, session, setSession } = useContext(UserContext);
-
+  useEffect(() => {}, [session]);
   function checkLoginLlayout() {
-    if (session) {
+    if (localStorage.getItem("keyAuth")) {
       return (
-        <>
-          <a href="">Bem-vindo</a>
+        <ul>
+          <a>Bem-vindo</a>
           <Link
             onClick={() => {
               setSession(false);
+              localStorage.removeItem("keyAuth");
             }}
             to={"/login"}>
             Sair
           </Link>
-        </>
+        </ul>
       );
     } else {
       return (
-        <>
+        <ul>
           <Link to={"/register"} onClick={() => setDataRegister({})}>
             Cadastrar
           </Link>
           <Link to={"/login"} onClick={() => setDataRegister({})}>
             Entrar
           </Link>
-        </>
+        </ul>
       );
     }
   }
@@ -40,10 +41,7 @@ function Header() {
         <div>
           <img src={logo} alt="Logo Get a Pet" />
         </div>
-        <ul>
-          <li></li>
-          <li>{checkLoginLlayout()}</li>
-        </ul>
+        {checkLoginLlayout()}
       </header>
     </>
   );

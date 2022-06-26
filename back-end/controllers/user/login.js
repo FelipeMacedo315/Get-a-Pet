@@ -10,7 +10,7 @@ async function login(req, res) {
     res.status(422).json({ msg: "Email não registrado!" });
   } else {
     if (senha === checkLogin.senha) {
-      res.status(200).json({ msg: "bem-vindo" });
+        res.status(200).json({ msg: "bem-vindo", keytoken: checkLogin._id.toString() });
     } else {
       res.status(422).json({ msg: "Senha inválida" });
     }

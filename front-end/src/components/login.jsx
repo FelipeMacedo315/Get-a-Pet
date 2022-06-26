@@ -6,6 +6,7 @@ import UserContext from "./ContextUser";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Login() {
   const { dataRegister, setDataRegister, resultApi, setResultApi, session, setSession } = useContext(UserContext);
@@ -22,8 +23,9 @@ function Login() {
       })
       .then((result) => {
         console.log(result);
-        redirectToHome("/");
+        localStorage.setItem("keyAuth", result.data.keytoken);
         setSession(true);
+        redirectToHome("/");
       })
       .catch((err) => {
         console.log(err);
