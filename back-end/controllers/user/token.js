@@ -8,10 +8,7 @@ async function token(emailUser) {
   });
   const decodeToken = jwt.verify(token, "segredo");
 
-  const insert = await usersModel.updateOne(
-    { email: emailUser },
-    { token: decodeToken }
-  );
+  const insert = await usersModel.updateOne({ email: emailUser }, { token: decodeToken });
 }
 
 module.exports = token;

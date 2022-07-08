@@ -3,30 +3,28 @@ const usersModel = require("../../models/users");
 
 async function createPets(req, res) {
   const exactUser = req.headers.email;
-  const { animalPet, pesoPet, corPet, sexoPet } = req.body;
-  const donodata = await usersModel.findOne({ email: exactUser });
+  const { animal, peso, cor, sexo } = req.body;
 
-  if (!animalPet || !pesoPet || !corPet || !sexoPet) {
-    res.status(422).json({ msg: "Prencha os dados do seu pet corretamente" });
+  const nomeArchive = req.files.map((item) => item.filename);
+
+  if (animal === "undefined" || peso === "undefined" || cor === "undefined" || sexo === "undefined") {
+    res.status(422).json({ msg: "Os campos precisam estar prenchidos corretamente!" });
   } else {
+    const donodata = await usersModel.findOne({ email: exactUser });
     const dataPet = await petsModel.create({
-      animal: animalPet,
-      peso: pesoPet,
-      cor: corPet,
-      sexo: sexoPet,
+      animal: animal,
+      peso: peso,
+      cor: cor,
+      sexo: sexo,
       disponivel: true,
+      imagens: nomeArchive,
       dono: {
         nome: donodata.nome,
         email: donodata.email,
         desde: donodata.createdAt,
       },
     });
-
-    res
-      .status(200)
-      .json({
-        msg: `Parabens! ${donodata.nome} seu pet foi cadastrado e agora e só aguardar contato de adotantes`,
-      });
+    res.status(200).json({ msg: `${donodata.nome} seu pet foi ja esta disponivel para adoção!` });
   }
 }
 

@@ -4,17 +4,22 @@ import logo from "../assets/dog_logo.png";
 import "../assets/header.css";
 import UserContext from "./ContextUser";
 function Header() {
-  const { resultApi, setResultApi, dataRegister, setDataRegister, session, setSession } = useContext(UserContext);
+  const { dataRegister, setDataRegister, session, setSession } = useContext(UserContext);
   useEffect(() => {}, [session]);
   function checkLoginLlayout() {
     if (localStorage.getItem("keyAuth")) {
       return (
         <ul>
-          <a>Bem-vindo</a>
+          <a href="">Adotar</a>
+          <Link to={"/MyPets"}>My pets</Link>
+          <Link to={"/update/info/user"}> Perfil </Link>
           <Link
             onClick={() => {
               setSession(false);
               localStorage.removeItem("keyAuth");
+              localStorage.removeItem("nomeUser");
+              localStorage.removeItem("emailUser");
+              localStorage.removeItem("senhaUser");
             }}
             to={"/login"}>
             Sair

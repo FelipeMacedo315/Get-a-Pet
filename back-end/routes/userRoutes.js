@@ -7,5 +7,5 @@ const userRoutes = express.Router();
 
 userRoutes.get("/register", createUser.formRegisterUser);
 userRoutes.post("/register/data",createUser.dataUserRegister);
-userRoutes.patch("/update", checkAuth, updateinfo);
+userRoutes.patch("/updateUser", checkAuth, updateinfo);
 module.exports = userRoutes;

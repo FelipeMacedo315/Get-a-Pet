@@ -1,0 +1,65 @@
+.nenhum-animal-adotar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.nenhum-animal-adotar a {
+  color: red;
+  font-weight: bold;
+}
+.my-pets-page {
+  width: 100%;
+  min-height: 70vh;
+  text-align: center;
+}
+.my-pets-page h3 {
+  padding-top: 5%;
+}
+.all-my-pets-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4rem;
+  height: 100%;
+}
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 35vh;
+}
+.img-pet {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.pets-btn {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn-edit {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 1rem;
+  font-weight: bold;
+  padding: 0.7rem 0.7rem;
+}
+.btn-delete {
+  background-color: crimson;
+  color: white;
+  border-radius: 1rem;
+  font-weight: bold;
+  padding: 0.7rem 0.7rem;
+}
+.msg-feedback{
+  color: white;
+  background-color: crimson;
+  padding: 1.5rem 1rem;
+  margin: 0% 30%;
+  border-radius: 1rem;
+}

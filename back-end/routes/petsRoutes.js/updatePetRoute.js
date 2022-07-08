@@ -10,15 +10,11 @@ const upload = multer({
     destination: path.resolve(__dirname, "../../imagenspet"),
     filename: (req, file, cb) => {
       cb(null, Math.random().toString() + file.originalname);
+      console.log(req.files);
     },
   }),
 });
 
-updatePetRoute.patch(
-  "/updatePet",
-  upload.array("fotopet"),
-  checkAuth,
-  updatePet
-);
+updatePetRoute.patch("/updatePet", upload.array("fotopet"), checkAuth, updatePet);
 
 module.exports = updatePetRoute;

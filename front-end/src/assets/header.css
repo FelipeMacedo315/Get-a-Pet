@@ -8,13 +8,13 @@ header {
 header img {
   height: 50px;
 }
-ul {
+header ul {
   list-style: none;
   display: flex;
-  width: 20%;
+  width: 30%;
   justify-content: space-between;
 }
-a {
+ header a {
   text-decoration: none;
   color: rgb(44, 44, 177);
   font-weight: bold;
@@ -23,7 +23,7 @@ a {
   border-radius: 15px;
   box-sizing: border-box;
 }
-a:hover {
+ header a:hover {
   border: none;
   color: white;
   background-color: rgb(44, 44, 177);

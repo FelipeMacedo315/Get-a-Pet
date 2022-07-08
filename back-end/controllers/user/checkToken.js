@@ -3,13 +3,9 @@ const usersModel = require("../../models/users");
 const checkAuth = async (req, res, next) => {
   const exactUser = req.headers.email;
   const user = await usersModel.findOne({ email: exactUser });
-  if (
-    user === null ||
-    user.token.keyToken !== user._id.toString() ||
-    user.token === null
-  ) {
-    res.status(401).json({ msg: "Faça login novamente!" });
-    res.end();
+
+  if (user.token.KeyToken !== user._id.toString()) {
+    return res.status(401).json({ msg: "Faça login novamente!" });
   } else {
     next();
   }

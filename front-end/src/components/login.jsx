@@ -6,10 +6,9 @@ import UserContext from "./ContextUser";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useEffect } from "react";
 
 function Login() {
-  const { dataRegister, setDataRegister, resultApi, setResultApi, session, setSession } = useContext(UserContext);
+  const { dataRegister, setDataRegister, session, setSession } = useContext(UserContext);
 
   let redirectToHome = useNavigate();
   const [errorFieldEmail, setErrorFieldEmail] = useState("");
@@ -24,6 +23,9 @@ function Login() {
       .then((result) => {
         console.log(result);
         localStorage.setItem("keyAuth", result.data.keytoken);
+        localStorage.setItem("nomeUser", result.data.nomeUser);
+        localStorage.setItem("emailUser", result.data.emailUser);
+        localStorage.setItem("senhaUser", result.data.senhaUser);
         setSession(true);
         redirectToHome("/");
       })
