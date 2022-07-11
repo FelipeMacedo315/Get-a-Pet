@@ -11,6 +11,7 @@ import UpdateUserInfo from "./components/updateUser";
 import MyPets from "./components/myPets";
 import AddPet from "./components/addPet";
 import EditPet from "./components/editPet";
+import Home from "./components/home";
 
 function App() {
   const [dataRegister, setDataRegister] = useState({});
@@ -22,12 +23,13 @@ function App() {
           <Header />
           <Container>
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/update/info/user" element={<UpdateUserInfo />} />
               <Route path="/MyPets" element={<MyPets />} />
               <Route path="/add/pet" element={<AddPet />} />
-              <Route path="/update/pet/:id" element={<EditPet />} />
+              <Route path="/edit/pet/:id" element={<EditPet />} />
             </Routes>
           </Container>
           <Footer />

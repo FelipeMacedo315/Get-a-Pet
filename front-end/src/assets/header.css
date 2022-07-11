@@ -1,27 +1,33 @@
 header {
   display: flex;
   justify-content: space-between;
+ align-items: center;
   background-color: rgb(233, 233, 20);
   align-items: center;
-  padding: 0% 5%;
+ padding: 0% 5%;
 }
 header img {
   height: 50px;
+ 
 }
 header ul {
   list-style: none;
   display: flex;
-  width: 30%;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+ 
 }
  header a {
   text-decoration: none;
   color: rgb(44, 44, 177);
   font-weight: bold;
   transition: 800ms;
-  padding: 5% 2%;
+ margin-left: 3rem;
+ padding: 0.5rem 1rem;
   border-radius: 15px;
   box-sizing: border-box;
+  
 }
  header a:hover {
   border: none;

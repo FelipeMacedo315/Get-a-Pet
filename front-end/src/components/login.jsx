@@ -17,8 +17,8 @@ function Login() {
   function submitLogin() {
     axios
       .post("http://localhost:5000/login", {
-        email: dataRegister.email,
-        senha: dataRegister.senha,
+        email: dataRegister.Email,
+        senha: dataRegister.Senha,
       })
       .then((result) => {
         console.log(result);
@@ -38,30 +38,27 @@ function Login() {
   const handleSubmit = (h) => {
     h.preventDefault();
     console.log(dataRegister);
-    if (dataRegister.email === undefined) {
-      setErrorFieldEmail("Campo email não pode ficar vazio");
-    } else if (!dataRegister.email.includes("@") || !dataRegister.email.includes(".com")) {
-      setErrorFieldEmail("Este email e invalido");
+    if (!dataRegister.Email) {
+      setErrorFieldEmail("email invalido");
     } else {
       setErrorFieldEmail("");
     }
-
-    if (!dataRegister.senha) {
-      setErrorFieldSenha("o campo senha não pode ficar vazio");
+    if (!dataRegister.Senha) {
+      setErrorFieldSenha("senha invalida");
     } else {
       setErrorFieldSenha("");
     }
-    if (dataRegister.email.includes("@") && dataRegister.email.includes(".com") && dataRegister.senha) {
+    if (dataRegister.Senha && dataRegister.Email) {
       submitLogin();
     }
   };
 
   return (
-    <div className="form-completed">
+    <div className="content">
       <h2>Login</h2>
       <form action="/login" onSubmit={handleSubmit}>
-        <Form type="text" title="Email" name="email" placeholder=" Email" errorFieldMsg={errorFieldEmail} />
-        <Form type="password" title="Senha" placeholder=" Senha" name="senha" errorFieldMsg={errorFieldSenha} />
+        <Form type="text" title="Email" name="Email" placeholder=" Email" errorFieldMsg={errorFieldEmail} />
+        <Form type="password" title="Senha" name="Senha" placeholder=" Senha" errorFieldMsg={errorFieldSenha} />
         <button onClick={handleSubmit} type="submit">
           Entry
         </button>

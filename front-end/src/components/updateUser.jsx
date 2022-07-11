@@ -40,7 +40,7 @@ function UpdateUserInfo() {
   };
 
   return (
-    <div className="form-completed">
+    <div className="content">
       <h2>Atualizar Informações</h2>
       <h2>{modalFeedback} </h2>
       <form onSubmit={handleSubmit}>

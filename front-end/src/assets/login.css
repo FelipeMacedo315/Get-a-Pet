@@ -1,8 +1,11 @@
- .form-completed{
+.content {
   display: flex;
   align-items: center;
   flex-direction: column;
- }
+  justify-content: center;
+  min-height: 70vh;
+ 
+}
 form {
   display: flex;
   flex-direction: column;
@@ -25,11 +28,11 @@ form {
   width: 100%;
   padding: 1%;
 }
-button{
+.btn-submit {
   padding: 2%;
   font-size: 1rem;
 }
-small{
+small {
   text-align: start;
   color: red;
   font-size: 0.8rem;

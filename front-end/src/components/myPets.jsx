@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useCallback, useMemo } from "react";
+
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -31,9 +31,6 @@ function MyPets() {
         },
       });
       setMsgFeedback("pet foi excluido da plataforma");
-      setInterval(() => {
-        setMsgFeedback("");
-      }, 4000);
     } catch (error) {
       console.log(error, "<<erro");
     }

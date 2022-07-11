@@ -64,7 +64,7 @@ function Register() {
     console.log(dataRegister);
   };
   return (
-    <div className="form-completed">
+    <div className="content">
       <h2>Create Profile</h2>
       <form action="">
         <Form type="text" title="Nome" name="nome" placeholder=" Nome completo" errorFieldMsg={errorFieldNome} />
@@ -77,7 +77,7 @@ function Register() {
           placeholder=" Digite a senha novamente"
           errorFieldMsg={errorFieldConfirmSenha}
         />
-        <button onClick={handleSubmit} type="submit">
+        <button className="btn-submit" onClick={handleSubmit} type="submit">
           Register
         </button>
       </form>

@@ -10,7 +10,7 @@ function Header() {
     if (localStorage.getItem("keyAuth")) {
       return (
         <ul>
-          <a href="">Adotar</a>
+          <Link to={"/"}>Adotar</Link>
           <Link to={"/MyPets"}>My pets</Link>
           <Link to={"/update/info/user"}> Perfil </Link>
           <Link

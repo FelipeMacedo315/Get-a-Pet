@@ -6,14 +6,7 @@ function Form(props) {
   return (
     <div className="fields">
       <label>{props.title}</label>
-      <input
-        onChange={(e) => {
-          dataRegister[props.name] = e.target.value;
-        }}
-        type={props.type}
-        placeholder={props.placeholder}
- 
-      />
+      <input onChange={(v) => (dataRegister[props.name] = v.target.value)} type={props.type} placeholder={props.placeholder} />
       <small>{props.errorFieldMsg}</small>
     </div>
   );

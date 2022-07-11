@@ -7,9 +7,9 @@ const updatePetRoute = express.Router();
 
 const upload = multer({
   storage: multer.diskStorage({
-    destination: path.resolve(__dirname, "../../imagenspet"),
+    destination: path.resolve(__dirname, "../../../front-end/src/assets/imagenspet"),
     filename: (req, file, cb) => {
-      cb(null, Math.random().toString() + file.originalname);
+      cb(null,file.originalname);
       console.log(req.files);
     },
   }),
