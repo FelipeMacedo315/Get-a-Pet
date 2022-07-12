@@ -1,0 +1,19 @@
+.unique-pet-content {
+  min-height: 70vh;
+  width: 100%;
+}
+.unique-pet-card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+p{
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.img-unique-pet {
+  width: 40vw;
+  border-radius: 2rem;
+  margin-bottom: 5rem;
+}

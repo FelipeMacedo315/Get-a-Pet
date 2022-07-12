@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import "../../src/assets/home.css";
+import { Link } from "react-router-dom";
+
 function Home() {
   const [allPets, setAllPets] = useState([]);
 
@@ -25,8 +26,10 @@ function Home() {
             //   console.log(`../assets/imagenspet/${item.imagens[0]}`);
             return (
               <div className="pet-card">
-                <img className="img-pet" src={img} alt="" />
-                <h2>{item.animal}</h2>
+                <Link to={`/pet/view/${item._id}`}>
+                  <img className="img-pet" src={img} alt="" />
+                  <h2>{item.animal}</h2>
+                </Link>
               </div>
             );
           })
