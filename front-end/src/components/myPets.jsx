@@ -13,7 +13,8 @@ function MyPets() {
     try {
       const dataMyPets = await axios.get("http://localhost:5000/myPets", {
         headers: {
-          email: localStorage.getItem("emailUser"),
+          idkeyuser: localStorage.getItem("keyAuth"),
+          emailuser: localStorage.getItem("emailUser"),
         },
       });
       setMyPets(dataMyPets.data.yourPetsAdoption);

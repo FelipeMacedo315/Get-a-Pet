@@ -57,6 +57,8 @@ function Register() {
       .then((sucess) => {
         console.log(sucess);
         localStorage.setItem("keyAuth", sucess.data.keytoken);
+        localStorage.setItem("emailUser", sucess.data.emailUser);
+        alert(localStorage.getItem("emailUser"));
         redirectHome("/");
         setSession(true);
       })

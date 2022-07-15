@@ -23,7 +23,7 @@ function AddPet() {
 
     try {
       const api = await axios.post(url, formdata, {
-        headers: { "Content-Type": "multipart/form-data", email: localStorage.getItem("emailUser") },
+        headers: { "Content-Type": "multipart/form-data", idkeyuser: localStorage.getItem("keyAuth"), emailuser: localStorage.getItem("emailUser") },
       });
       redirectToHome("/");
       console.log(api);

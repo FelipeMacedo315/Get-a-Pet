@@ -6,6 +6,7 @@ import UserContext from "./ContextUser";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Btn from "./btn";
 
 function Login() {
   const { dataRegister, setDataRegister, session, setSession } = useContext(UserContext);
@@ -55,13 +56,11 @@ function Login() {
 
   return (
     <div className="content">
-      <h2>Login</h2>
+      <h2>Bem-vindo</h2>
       <form action="/login" onSubmit={handleSubmit}>
         <Form type="text" title="Email" name="Email" placeholder=" Email" errorFieldMsg={errorFieldEmail} />
         <Form type="password" title="Senha" name="Senha" placeholder=" Senha" errorFieldMsg={errorFieldSenha} />
-        <button onClick={handleSubmit} type="submit">
-          Entry
-        </button>
+        <Btn event={handleSubmit} content={"Login"} class="btn-login" />
       </form>
     </div>
   );

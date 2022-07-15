@@ -14,19 +14,15 @@ async function login(req, res) {
         msg: "bem-vindo",
         nomeUser: checkLogin.nome,
         emailUser: checkLogin.email,
-        senhaUser: checkLogin.senha,
-      })
-      token(email)
+        keytoken: checkLogin._id.toString(),
+      });
+      token(email);
     } else {
       res.status(422).json({ msg: "Senha inválida" });
     }
   }
 }
 
-function loginForm(req, res) {
-  res.status(200).json({ msg: "Form de login" });
-}
 module.exports = {
   login,
-  loginForm,
 };

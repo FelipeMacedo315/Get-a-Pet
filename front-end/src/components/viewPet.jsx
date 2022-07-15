@@ -9,6 +9,7 @@ function ViewPet() {
   const { id } = useParams();
   const [petData, setPetData] = useState("");
   const [loading, setloading] = useState(true);
+  const [chevronRotate, setChevronRotate] = useState(0);
 
   useEffect(() => {
     setloading(true);
@@ -36,7 +37,26 @@ function ViewPet() {
           <p>Peso: {petData.peso}</p>
           <p>Cor: {petData.cor}</p>
           <p>Sexo: {petData.sexo}</p>
-          <p>Disponivel: {petData.disponivel ? <span>Sim</span> : <span>Não</span>}</p>
+          <div className="open-more-info">
+            <p>Disponivel: {petData.disponivel ? <span>Sim</span> : <span>Não</span>}</p>
+            <button
+              className="btn-chevron"
+              onClick={() => {
+                if (chevronRotate === 0) {
+                  setChevronRotate(90);
+                } else {
+                  setChevronRotate(0);
+                }
+              }}
+              style={{ transform: `rotate(${chevronRotate}deg)` }}></button>
+          </div>
+          {chevronRotate === 90 ? (
+            <div>
+              <p>Dono: {petData.dono.nome}</p>
+              <p>Contato: {petData.dono.email}</p>
+              
+            </div>
+          ) : null}
         </div>
       ) : (
         <h1>carregando</h1>

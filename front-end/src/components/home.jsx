@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../assets/home.css";
+import Btn from "./btn";
 
 function Home() {
   const [allPets, setAllPets] = useState([]);
@@ -19,16 +21,16 @@ function Home() {
 
   console.log(allPets);
   return (
-    <div className="all-my-pets-container">
+    <div className="home-page">
       {allPets.length > 0
         ? allPets.map((item, index) => {
             const img = require(`../assets/imagenspet/${item.imagens[0]}`);
-            //   console.log(`../assets/imagenspet/${item.imagens[0]}`);
             return (
-              <div className="pet-card">
+              <div className="home-page-pet-card">
+                <div style={{ backgroundImage: `url(${img})` }} className="img-pet-home-card"></div>
+                <h2>{item.animal}</h2>
                 <Link to={`/pet/view/${item._id}`}>
-                  <img className="img-pet" src={img} alt="" />
-                  <h2>{item.animal}</h2>
+                  <Btn class="btn-mais-detalhes" content={"Mais detalhes"}></Btn>
                 </Link>
               </div>
             );
