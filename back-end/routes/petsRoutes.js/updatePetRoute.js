@@ -9,12 +9,11 @@ const upload = multer({
   storage: multer.diskStorage({
     destination: path.resolve(__dirname, "../../../front-end/src/assets/imagenspet"),
     filename: (req, file, cb) => {
-      cb(null,file.originalname);
-      console.log(req.files);
+      cb(null, file.originalname);
     },
   }),
 });
 
-updatePetRoute.patch("/updatePet", upload.array("fotopet"), checkAuth, updatePet);
+updatePetRoute.patch("/updatePet", checkAuth, upload.array("fotopet"), updatePet);
 
 module.exports = updatePetRoute;

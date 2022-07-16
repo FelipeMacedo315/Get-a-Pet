@@ -5,6 +5,6 @@ const token = require("../controllers/user/token");
 const updateinfo = require("../controllers/user/updateInfo");
 const userRoutes = express.Router();
 
-userRoutes.post("/register/data",createUser.dataUserRegister);
+userRoutes.post("/register/data", createUser.dataUserRegister);
 userRoutes.patch("/updateUser", checkAuth, updateinfo);
 module.exports = userRoutes;

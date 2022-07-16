@@ -39,7 +39,7 @@ function AddPet() {
   }
 
   return (
-    <div className="form-completed">
+    <div className="content">
       <p>{msgFeedBack}</p>
       <h2>Dados do meu pet</h2>
       <form>

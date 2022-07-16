@@ -5,6 +5,7 @@ import Form from "./form";
 import { useState } from "react";
 import UserContext from "./ContextUser";
 import { useNavigate } from "react-router-dom";
+import Btn from "./btn";
 function UpdateUserInfo() {
   const nomeUser = localStorage.getItem("nomeUser");
   const emailUser = localStorage.getItem("emailUser");
@@ -25,17 +26,17 @@ function UpdateUserInfo() {
           senha: dataRegister.senha,
         },
         {
-          headers: { email: emailUser },
+          headers: { email: emailUser, idkeyuser: localStorage.getItem("keyAuth") },
         }
       )
       .then((sucess) => {
         console.log(sucess);
         redirectToHome("/");
-        return setModalFeedback(sucess.data.msg);
+        setModalFeedback(sucess.data.msg);
       })
       .catch((erro) => {
         console.log(erro);
-        return setModalFeedback(erro.response.data.msg);
+        setModalFeedback(erro.response.data.msg);
       });
   };
 
@@ -43,12 +44,12 @@ function UpdateUserInfo() {
     <div className="content">
       <h2>Atualizar Informações</h2>
       <h2>{modalFeedback} </h2>
-      <form onSubmit={handleSubmit}>
-        <Form type="text" title="Nome" name="nome" placeholder={nomeUser} />
+      <form>
+        <Form type="text" title="Nome" name="nome" placeholder={nomeUser} event={setDataRegister()} />
         <Form type="text" title="Email" name="email" placeholder={emailUser} />
         <Form type="password" title="Senha" name="senha" placeholder={senhaUser} />
         <Form type="password" title="Confirmar" name="confirmar_senha" placeholder=" Digite a senha novamente" />
-        <button type="submit">Update</button>
+        <Btn content="Atualizar" class="btn-update-user" event={handleSubmit} />
       </form>
     </div>
   );

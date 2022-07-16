@@ -34,7 +34,7 @@
   height: 150px;
   border-radius: 50%;
 }
-.pets-btn {
+.pets-btn-container {
   padding-top: 1rem;
   width: 100%;
   display: flex;
@@ -45,19 +45,22 @@
   color: white;
   border-radius: 1rem;
   font-weight: bold;
-  padding: 0.7rem 0.7rem;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+.btn-edit a {
+  text-decoration: none;
+  color: white;
 }
 .btn-delete {
   background-color: crimson;
   color: white;
   border-radius: 1rem;
   font-weight: bold;
-  padding: 0.7rem 0.7rem;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
 }
-.msg-feedback {
-  color: white;
-  background-color: crimson;
-  padding: 1.5rem 1rem;
-  margin: 0% 30%;
-  border-radius: 1rem;
-}
+
+

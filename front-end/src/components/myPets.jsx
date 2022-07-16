@@ -1,8 +1,8 @@
 import axios from "axios";
-
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Btn from "./btn";
 import "../assets/mypets.css";
 
 function MyPets() {
@@ -43,7 +43,6 @@ function MyPets() {
 
   return (
     <div className="my-pets-page">
-      <h2 className="msg-feedback">{msgfeedback}</h2>
       {myPets.length === 0 ? (
         <div className="nenhum-animal-adotar">
           <h2>Você ainda não tem nenhum pet cadastrado</h2>
@@ -60,13 +59,11 @@ function MyPets() {
                 <h2>Kg: {item.peso}</h2>
                 <h2>Sexo: {item.sexo}</h2>
                 <h2>Cor: {item.cor}</h2>
-                <div className="pets-btn">
+                <div className="pets-btn-container">
                   <button className="btn-edit">
                     <Link to={`/edit/pet/${item._id}`}>Editar</Link>
                   </button>
-                  <button onClick={() => deletePet(item._id)} className="btn-delete">
-                    Excluir
-                  </button>
+                  <Btn class="btn-delete" content="Excluir" event={() => deletePet(item._id)} />
                 </div>
               </div>
             );
