@@ -53,7 +53,7 @@ function MyPets() {
           {myPets.map((item, index) => {
             const img = require(`../assets/imagenspet/${item.imagens[0]}`);
             return (
-              <div className="pet-card" key={item.peso}>
+              <div className="my-pets-card" key={item.peso}>
                 <img className="img-pet" src={img} alt="pet-foto" />
                 <h2>Nome: {item.animal}</h2>
                 <h2>Kg: {item.peso}</h2>

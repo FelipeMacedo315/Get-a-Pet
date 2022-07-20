@@ -4,6 +4,8 @@
   flex-wrap: wrap;
   min-height: 70vh;
   margin-left: 4rem;
+
+
 }
 .home-page-pet-card {
   display: flex;
@@ -20,7 +22,7 @@
   width: 100%;
   transition: linear 0.5s;
 }
-.home-page-pet-card a :hover{
+.home-page-pet-card a :hover {
   color: white;
 }
 .home-page-pet-card h2 {
@@ -46,7 +48,7 @@
   cursor: pointer;
   border: none;
 }
-.btn-update-user{
+.btn-update-user {
   background-color: #e7c30d;
   padding: 1rem;
   font-size: 1rem;
@@ -57,6 +59,7 @@
   cursor: pointer;
   border: none;
 }
-.btn-mais-detalhes:hover, .btn-update-user:hover{
+.btn-mais-detalhes:hover,
+.btn-update-user:hover {
   color: white;
 }

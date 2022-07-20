@@ -26,8 +26,8 @@ function Home() {
         ? allPets.map((item, index) => {
             const img = require(`../assets/imagenspet/${item.imagens[0]}`);
             return (
-              <div className="home-page-pet-card">
-                <div style={{ backgroundImage: `url(${img})` }} className="img-pet-home-card"></div>
+              <div className="home-page-pet-card" key={index}>
+                <div style={{ backgroundImage: `url(${img})`, backgroundPosition: "center" }} className="img-pet-home-card"></div>
                 <h2>{item.animal}</h2>
                 <Link to={`/pet/view/${item._id}`}>
                   <Btn class="btn-mais-detalhes" content={"Mais detalhes"}></Btn>

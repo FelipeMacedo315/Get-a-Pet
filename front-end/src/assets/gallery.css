@@ -1,0 +1,60 @@
+.gallery-container {
+  margin: 0% 10%;
+  border: solid;
+  position: absolute;
+  top: 10%;
+  height: 80vh;
+  width: 80%;
+  background-color: #085689;
+}
+.gallery {
+  height: inherit;
+  width: 100%;
+}
+.gallery img {
+  width: 100%;
+  height: inherit;
+}
+
+.btn-left {
+  background-color: transparent;
+  border-radius: 1rem;
+  position: relative;
+  bottom: 60%;
+  left: 2%;
+  background-image: url("./chevron.png");
+  background-size: cover;
+  padding: 2rem;
+  border: solid white;
+}
+.btn-right {
+  transform: rotate(180deg);
+  background-color: transparent;
+  border-radius: 1rem;
+  position: relative;
+  bottom: 60%;
+  left: 87%;
+  background-image: url("./chevron.png");
+  background-size: cover;
+  padding: 2rem;
+  border: solid white;
+}
+.btn-right:hover,
+.btn-left:hover {
+  background-color: yellow;
+}
+
+.btn-close-gallery {
+  background-color: transparent;
+  border-radius: 1rem;
+  position: relative;
+  bottom: 100%;
+  left: 82%;
+  background-image: url("./closeicon.png");
+  background-size: cover;
+  padding: 1.5rem;
+  border: solid white;
+}
+.btn-close-gallery:hover {
+  filter: invert(50%);
+}

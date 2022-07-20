@@ -1,0 +1,43 @@
+@media screen and (max-width: 600px) {
+  header ul {
+    width: 100%;
+    padding-left: 2%;
+  }
+  header a {
+    font-size: 1rem;
+  }
+  .content {
+    gap: 10vh;
+  }
+  .content h2 {
+    font-size: 2rem;
+  }
+  .home-page {
+    flex-direction: column;
+    margin-left: 0%;
+  }
+  .home-page-pet-card {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .home-page-pet-card a {
+    padding: 1rem;
+  }
+  .img-unique-pet {
+    width: 100%;
+  }
+  .open-more-info{
+    width: 80%;
+  }
+  .all-my-pets-container{
+    flex-direction: column;
+  }
+  .my-pets-card{
+    width: 100%;
+    padding: 10% 0%;
+  }
+
+  form {
+    gap: 6vh;
+  }
+}

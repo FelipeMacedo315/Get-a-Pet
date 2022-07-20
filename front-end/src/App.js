@@ -13,6 +13,7 @@ import AddPet from "./components/addPet";
 import EditPet from "./components/editPet";
 import Home from "./components/home";
 import ViewPet from "./components/viewPet";
+import './assets/reponsive.css'
 
 function App() {
   const [dataRegister, setDataRegister] = useState({});

@@ -4,7 +4,9 @@ import { useState } from "react";
 import { useContext } from "react";
 import UserContext from "./ContextUser";
 import Form from "./form";
+import Btn from "./btn";
 import { useNavigate } from "react-router-dom";
+
 
 function AddPet() {
   const redirectToHome = useNavigate();
@@ -54,9 +56,7 @@ function AddPet() {
           }}
           multiple
         />
-        <button onClick={handleSubmit} type="submit">
-          Cadastrar
-        </button>
+         <Btn class='btn-add-pet' content='Cadastrar Pet' event={handleSubmit}/>
       </form>
     </div>
   );

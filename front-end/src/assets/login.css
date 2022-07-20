@@ -4,17 +4,18 @@
   flex-direction: column;
   justify-content: center;
   min-height: 70vh;
- 
+  gap: 5vh;
 }
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 24px;
-  gap: 2vh;
+  gap: 5vh;
 }
 .fields {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
 }
 .fields label {
@@ -28,9 +29,15 @@ form {
   width: 100%;
   padding: 1%;
 }
-.btn-submit {
-  padding: 2%;
-  font-size: 1rem;
+.btn-register {
+  background-color: #00c851;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 80%;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 small {
   text-align: start;
@@ -39,7 +46,7 @@ small {
   margin-left: 2%;
   padding: 1% 0%;
 }
-.btn-login{
+.btn-login {
   background-color: #00c851;
   color: #fff;
   padding: 1rem;

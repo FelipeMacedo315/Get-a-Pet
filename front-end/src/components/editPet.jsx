@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Form from "./form";
 import UserContext from "./ContextUser";
+import Btn from "./btn";
 function EditPet() {
   const { id } = useParams();
   const redirectToMyPets = useNavigate();
@@ -54,11 +55,9 @@ function EditPet() {
         <Form type="text" title="Cor" name="corPet" placeholder="cor" />
         <Form type="text" title="Sexo" name="sexoPet" placeholder="macho ou femea ?" />
         <input onChange={(v) => setImages(v.target.files)} type="file" multiple />
-        <button onClick={handlesubmit} className="btn-submit">
-          Atualizar
-        </button>
+        <Btn event={handlesubmit} content="Atualizar" class="btn-edit" />
       </form>
-      <button onClick={() => console.log(dataRegister)}>click</button>
+    
     </div>
   );
 }

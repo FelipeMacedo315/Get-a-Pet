@@ -1,37 +1,36 @@
 header {
   display: flex;
   justify-content: space-between;
- align-items: center;
   background-color: rgb(233, 233, 20);
   align-items: center;
- padding: 0% 5%;
+  padding: 0% 5%;
+  overflow: hidden;
 }
-header img {
-  height: 50px;
- 
+.logo-container {
+  padding: 5vh;
+  background-image: url("../assets//dog_logo.png");
+  background-size: cover;
+  background-position: center;
 }
+
 header ul {
   list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 50%;
- 
+
+  width: 30%;
+  justify-content: space-between;
 }
- header a {
+header a {
   text-decoration: none;
   color: rgb(44, 44, 177);
   font-weight: bold;
   transition: 800ms;
- margin-left: 3rem;
- padding: 0.5rem 1rem;
   border-radius: 15px;
   box-sizing: border-box;
-  
+  padding: 5%;
 }
- header a:hover {
+header a:hover {
   border: none;
   color: white;
   background-color: rgb(44, 44, 177);
-  
 }

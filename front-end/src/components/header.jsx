@@ -29,6 +29,7 @@ function Header() {
     } else {
       return (
         <ul>
+          <Link to={"/"}>Adotar</Link>
           <Link to={"/register"} onClick={() => setDataRegister({})}>
             Cadastrar
           </Link>
@@ -41,14 +42,10 @@ function Header() {
   }
 
   return (
-    <>
-      <header>
-        <div>
-          <img src={logo} alt="Logo Get a Pet" />
-        </div>
-        {checkLoginLlayout()}
-      </header>
-    </>
+    <header>
+      <div className="logo-container"></div>
+      {checkLoginLlayout()}
+    </header>
   );
 }
 export default Header;

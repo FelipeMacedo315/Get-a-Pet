@@ -5,7 +5,8 @@
 .unique-pet-card {
   display: flex;
   flex-direction: column;
-  margin-left: 4rem;
+  align-items: flex-start;
+  padding: 0% 2rem;
 }
 p {
   font-size: 1.2rem;
@@ -18,9 +19,10 @@ p {
   margin-bottom: 5rem;
 }
 .open-more-info {
-  width: 20%;
   display: flex;
   justify-content: space-between;
+  width: 20%;
+
 }
 .btn-chevron {
   background-color: transparent;
@@ -31,4 +33,3 @@ p {
   padding: 0.8rem;
   cursor: pointer;
 }
-

@@ -1,4 +1,5 @@
 import Form from "./form";
+import Btn from "./btn";
 import "../assets/login.css";
 import React, { useContext } from "react";
 import UserContext from "./ContextUser";
@@ -58,7 +59,6 @@ function Register() {
         console.log(sucess);
         localStorage.setItem("keyAuth", sucess.data.keytoken);
         localStorage.setItem("emailUser", sucess.data.emailUser);
-        alert(localStorage.getItem("emailUser"));
         redirectHome("/");
         setSession(true);
       })
@@ -79,9 +79,7 @@ function Register() {
           placeholder=" Digite a senha novamente"
           errorFieldMsg={errorFieldConfirmSenha}
         />
-        <button className="btn-submit" onClick={handleSubmit} type="submit">
-          Register
-        </button>
+        <Btn content="Cadastrar" class="btn-register" event={handleSubmit} />
       </form>
     </div>
   );
