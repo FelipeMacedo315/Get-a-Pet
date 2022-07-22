@@ -28,7 +28,9 @@ function ViewPet() {
         setPetData(exactPet[0]);
       });
   }, []);
-  console.log(petData);
+
+
+
   return (
     <div className="unique-pet-content">
       {!loading && petData.imagens.length > 0 ? (
@@ -56,7 +58,9 @@ function ViewPet() {
             <div>
               <p>- Dono: {petData.dono.nome}</p>
               <p>- Contato: {petData.dono.email}</p>
-              <nobr><p>- Para adoção desde: {petData.updatedAt.slice(5,7)+'/'+petData.updatedAt.slice(0,4)}</p></nobr>
+              <nobr>
+                <p>- Para adoção desde: {petData.updatedAt.slice(5, 7) + "/" + petData.updatedAt.slice(0, 4)}</p>
+              </nobr>
             </div>
           ) : null}
         </div>

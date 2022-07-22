@@ -11,7 +11,7 @@ form {
   flex-direction: column;
   align-items: center;
   font-size: 24px;
-  gap: 5vh;
+  gap: 2vh;
 }
 .fields {
   display: flex;
@@ -55,4 +55,15 @@ small {
   border-radius: 2rem;
   font-weight: bold;
   cursor: pointer;
+}
+.img-pet-preview {
+  width: 20%;
+  height: 10vh;
+  border: solid;
+}
+.img-pet-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }

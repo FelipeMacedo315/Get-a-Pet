@@ -26,18 +26,49 @@
   .img-unique-pet {
     width: 100%;
   }
-  .open-more-info{
+  .open-more-info {
     width: 80%;
   }
-  .all-my-pets-container{
+  .all-my-pets-container {
     flex-direction: column;
   }
-  .my-pets-card{
+  .my-pets-card {
     width: 100%;
     padding: 10% 0%;
   }
 
   form {
     gap: 6vh;
+  }
+
+  .gallery-container {
+    height: 50vh;
+    top: 20%;
+  }
+  .btn-close-icon {
+    left: 85%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .all-my-pets-container {
+    flex-direction: column;
+  }
+  .my-pets-card {
+    width: 100%;
+    padding: 5% 0%;
+  }
+  .img-pet{
+    width: 200px;
+    height: 200px;
+  }
+  .pets-btn-container{
+    width: 50%;
+  
+  }
+}
+@media  screen and (max-width:1024px) {
+  .all-my-pets-container{
+    justify-content: space-around;
+    align-items: flex-end;
   }
 }

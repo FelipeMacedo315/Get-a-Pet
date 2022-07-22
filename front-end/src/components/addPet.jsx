@@ -6,7 +6,7 @@ import UserContext from "./ContextUser";
 import Form from "./form";
 import Btn from "./btn";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
 
 function AddPet() {
   const redirectToHome = useNavigate();
@@ -42,6 +42,14 @@ function AddPet() {
 
   return (
     <div className="content">
+      <div className="img-pet-preview-container">
+        {files.length
+          ? files.map((item,index) => {
+            const imgPreview = URL.createObjectURL(item)
+              return <img className="img-pet-preview" src={imgPreview} alt="imagem-preview" />
+            })
+          : null}
+      </div>
       <p>{msgFeedBack}</p>
       <h2>Dados do meu pet</h2>
       <form>
@@ -52,11 +60,11 @@ function AddPet() {
         <input
           type="file"
           onChange={(e) => {
-            setFiles(e.target.files);
+            setFiles(Object.values(e.target.files));
           }}
           multiple
         />
-         <Btn class='btn-add-pet' content='Cadastrar Pet' event={handleSubmit}/>
+        <Btn class="btn-add-pet" content="Cadastrar Pet" event={handleSubmit} />
       </form>
     </div>
   );

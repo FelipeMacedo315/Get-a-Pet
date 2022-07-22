@@ -10,51 +10,45 @@
 .gallery {
   height: inherit;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .gallery img {
   width: 100%;
   height: inherit;
 }
+.btns-container {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 90%;
+  width: 10%;
+}
+.btn-gallery {
+  border-radius: 2rem;
+  padding: 0.3rem;
+  border: none;
+}
+.btn-close-icon{
+  border-radius: 2rem;
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+  position: absolute;
+  left: 95%;
+  top: 1rem;
+  background-image: url('./closeicon.png');
+  background-position: center;
+  background-size: cover;
 
-.btn-left {
-  background-color: transparent;
-  border-radius: 1rem;
-  position: relative;
-  bottom: 60%;
-  left: 2%;
-  background-image: url("./chevron.png");
-  background-size: cover;
-  padding: 2rem;
-  border: solid white;
 }
-.btn-right {
-  transform: rotate(180deg);
-  background-color: transparent;
-  border-radius: 1rem;
-  position: relative;
-  bottom: 60%;
-  left: 87%;
-  background-image: url("./chevron.png");
-  background-size: cover;
-  padding: 2rem;
-  border: solid white;
+.btn-close-icon:hover{
+  background-color: black;
 }
-.btn-right:hover,
-.btn-left:hover {
-  background-color: yellow;
+.btn-gallery:focus {
+  background-color: black;
 }
-
-.btn-close-gallery {
-  background-color: transparent;
-  border-radius: 1rem;
-  position: relative;
-  bottom: 100%;
-  left: 82%;
-  background-image: url("./closeicon.png");
-  background-size: cover;
-  padding: 1.5rem;
-  border: solid white;
-}
-.btn-close-gallery:hover {
-  filter: invert(50%);
+.btn-gallery:hover {
+  background-color: gray;
 }
