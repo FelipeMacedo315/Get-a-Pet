@@ -25,23 +25,23 @@ Projeto feito para colocar em pratica habilidades aprendidas durante o curso de 
 
 #### Veja abaixo algumas imagens do projeto
 
-![Create-profile-page](./src/assets/img_readme/cpimg.png)
+![Create-profile-page](./front-end/src//assets//img_readme/cpimg.png)
 
 ---
 
-![Login-page](./src/assets/img_readme/limg.png)
+![Login-page](./front-end/src//assets//img_readme/limg.png)
 
 ---
 
-![Home-page](./src/assets/img_readme/himg.png)
+![Home-page](./front-end/src//assets//img_readme/himg.png)
 
 ---
 
-![Mypets-page](./src/assets/img_readme/mpimg.png)
+![Mypets-page](./front-end/src//assets//img_readme/mpimg.png)
 
 ### Design Responsivo
 
-![responsevie-design](./src/assets/img_readme/rgif.gif)
+![responsevie-design](./front-end/src//assets//img_readme/rgif.gif)
 
 <h3> <i>Tecnologias utilizadas</i> </h3>
 
