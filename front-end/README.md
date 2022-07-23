@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# _Get a Pet_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto feito para colocar em pratica habilidades aprendidas durante o curso de **NodeJS !**
 
-## Available Scripts
+### No projeto o usuário irá encontrar funcionalidades como:
 
-In the project directory, you can run:
+#### Ao usuário:
 
-### `npm start`
+- Criar conta
+- Atualizar seus dados
+- Login
+- Ver todos os pets cadastrados na plataforma e suas informações
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Ao Pet
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Colocar o pet para adoção
+- Atualizar as informações do pet
+- Remover o pet da adoção
 
-### `npm test`
+### O projeto Get A Pet também itens como:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Design Responsivo
+- Autenticação de usuário
+- Rotas protegidas para somente usuarios cadastrados na plataforma
 
-### `npm run build`
+#### Veja abaixo algumas imagens do projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Create-profile-page](./src/assets/img_readme/cpimg.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Login-page](./src/assets/img_readme/limg.png)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Home-page](./src/assets/img_readme/himg.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Mypets-page](./src/assets/img_readme/mpimg.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Design Responsivo
 
-## Learn More
+![responsevie-design](./src/assets/img_readme/rgif.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h3> <i>Tecnologias utilizadas</i> </h3>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<div>
+ <h4><u>Front-end</u></h4>
+  <img src='https://img.icons8.com/color/96/000000/html-5--v1.png'alt='icon-html'/>
 
-### Code Splitting
+  <img src='https://img.icons8.com/color/96/000000/css3.png' alt='icon-css'/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  <img src='https://img.icons8.com/color/96/000000/javascript--v1.png' alt='icon-javascript'/>
 
-### Analyzing the Bundle Size
+  <img src='https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png' alt='icon-ReactJs'/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+</div>
 
-### Making a Progressive Web App
+<div>
+ <h4><u>Back-end </u></h4>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  <img src="https://img.icons8.com/color/96/000000/nodejs.png" alt='icon-NodeJs'/>
 
-### Advanced Configuration
+  <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/000000/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png" alt='icon-mongoDB'/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ </div>
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+ <p>Para ver melhor meu projeto copie esta URL <b><i>https://github.com/FelipeMacedo315/Get-a-Pet.git</i></b> e use a junto com o comando <b>git-clone.</b> </p>
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

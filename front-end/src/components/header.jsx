@@ -1,6 +1,5 @@
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/dog_logo.png";
 import "../assets/header.css";
 import UserContext from "./ContextUser";
 function Header() {
