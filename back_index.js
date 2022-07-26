@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const conn = require("./back-end/db/conn");
@@ -8,8 +9,7 @@ const updatePetRoute = require("./back-end/routes/petsRoutes.js/updatePetRoute")
 const petsModel = require("./back-end/models/pets");
 const myPetsAdoptionRoute = require("./back-end/routes/petsRoutes.js/myPetsAdoptionRoute");
 const deletePetRoute = require("./back-end/routes/petsRoutes.js/deletePetRoute");
-const port = process.env.PORT || 5000 
-
+const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors({ credentials: true }));
@@ -22,7 +22,7 @@ app.use(updatePetRoute);
 app.use(myPetsAdoptionRoute);
 app.use(deletePetRoute);
 
-app.get("/x", (req, res) => {
+app.get("/", (req, res) => {
   petsModel
     .find()
     .sort("-createdAt")
