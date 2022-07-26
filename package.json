@@ -2,10 +2,13 @@
   "name": "petadoption",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "back_index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ../back_index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+     
+    
+    
+  
    
    
   },
