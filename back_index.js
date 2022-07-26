@@ -31,4 +31,4 @@ app.get("/x", (req, res) => {
     });
 });
 
-app.listen(port, console.log("Server is work in porta: " + port));
+app.listen(port, console.log("Server is work"));
