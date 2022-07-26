@@ -4,13 +4,11 @@
   "description": "",
   "main": "back_index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon back_index.js"
      
-    
-    
-  
-   
-   
+
+
   },
   "author": "",
   "license": "ISC",
