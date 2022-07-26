@@ -8,8 +8,6 @@ const updatePetRoute = require("./back-end/routes/petsRoutes.js/updatePetRoute")
 const petsModel = require("./back-end/models/pets");
 const myPetsAdoptionRoute = require("./back-end/routes/petsRoutes.js/myPetsAdoptionRoute");
 const deletePetRoute = require("./back-end/routes/petsRoutes.js/deletePetRoute");
-const port = process.env.PORT || 5000 
-
 
 const app = express();
 app.use(cors({ credentials: true }));
@@ -31,4 +29,4 @@ app.get("/x", (req, res) => {
     });
 });
 
-app.listen(port, console.log("Server is work"));
+app.listen(5000, console.log("Server is work"));
