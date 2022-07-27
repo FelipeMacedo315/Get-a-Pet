@@ -21,7 +21,7 @@ app.use(updatePetRoute);
 app.use(myPetsAdoptionRoute);
 app.use(deletePetRoute);
 
-app.get("/x", (req, res) => {
+app.get("/", (req, res) => {
   petsModel
     .find()
     .sort("-createdAt")

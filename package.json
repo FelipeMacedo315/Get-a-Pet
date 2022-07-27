@@ -5,7 +5,7 @@
   "main": "back_index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon back_index.js"
+    "start": "node back_index.js"
   },
   "author": "",
   "license": "ISC",
