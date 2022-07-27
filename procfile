@@ -1,1 +1,2 @@
-web:node back_index.js
+server:node back_index.js
+web:cd front-end && npm start 
