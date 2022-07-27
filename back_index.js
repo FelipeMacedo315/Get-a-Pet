@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("./back-end/node_modules/dotenv/lib/main").config();
 const express = require("express");
 const cors = require("cors");
 const conn = require("./back-end/db/conn");
