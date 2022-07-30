@@ -1,1 +1,1 @@
-web:node back-end/back_index.js
+web:cd back-end
